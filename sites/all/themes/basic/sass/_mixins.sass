@@ -1,0 +1,24 @@
+// Mixins
+// ------
+// Mixins allow you to define styles that can be re-used 
+// throughout the stylesheet without needing to resort to 
+// non-semantic classes like .float-left. Mixins can also
+// contain full CSS rules, and anything else allowed 
+// elsewhere in a Sass document. They can even take 
+// arguments which allows you to produce a wide variety 
+// of styles with very few mixins. 
+//
+// For complete documentation: 
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
+
+// Import variables for use in Mixins.
+@import _variables.sass
+
+// Rounded corners mixin.
+@mixin rounded_corners($top: 10px, $right: 10px, $bottom: $top, $left: $right)
+  border-radius: $top $right $bottom $left
+  -moz-border-radius: $top $right $bottom $left
+  -webkit-border-top-left-radius: $top
+  -webkit-border-top-right-radius: $right
+  -webkit-border-bottom-left-radius: $bottom
+  -webkit-border-bottom-right-radius: $left
