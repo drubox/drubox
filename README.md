@@ -1,0 +1,4 @@
+drubox
+======
+
+A Drupal distribution
