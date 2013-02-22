@@ -10,3 +10,6 @@ To use that utilities you have to do:
 
 ##Demo
 In this repository cames a file called "demo.profile" with the use of this utilities.
+
+##Some Info
+I just delete the olders revisions to trying reduce the size of the git repository. Hope it works...
