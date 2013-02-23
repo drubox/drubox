@@ -25,3 +25,25 @@ function enable_default_theme($theme_name){
   // Enable the default theme Rubik.
   variable_set('theme_default', $theme_name);
 }
+
+
+function add_block_to_theme($module, $block_name, $region, $title = '<none>', $weight = 0){
+  $theme = variable_get('theme_default', 'bartik');
+
+  $block = array(
+    'module' => $module,
+    'delta' => $block_name,
+    'theme' => $theme,
+    'status' => 1,
+    'weight' => $weight,
+    'region' => $region,
+    'pages' => '',
+    'cache' => -1,
+    'title' => $title,
+  );
+
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'pages', 'cache', 'title'));
+  $query->values($block);
+  $query->execute();
+}
+
